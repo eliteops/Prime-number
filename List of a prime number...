@@ -1,0 +1,13 @@
+lis_t = []
+length = int(input('Enter length of prime numbers : '))
+for i in range(2, 500):         # here we can use another input to ask user !!!
+    for j in range(2, i):
+        if i == j:
+            continue
+        if i % j == 0:
+            break
+    else:
+        lis_t.append(i)
+        if len(lis_t) == length:
+            break
+print(lis_t)
