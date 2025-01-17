@@ -1,0 +1,21 @@
+import time
+def prime_num(num: int):
+    list_divisor = [i for i in range(2, num//2) if num % i == 0]   # main code to check if given number is prime or not 
+                                                                    # using List Comprehension
+    
+    if list_divisor:
+        return f"{num} is not a prime number. \n {list_divisor}"    # here we are showing list of divisors (list_divisor)
+    else:
+        return f"{num} is a prime number."                          # if list_divisor is empty, it means number is prime.
+
+
+start_time = time.time()                                            # here we are getting starting time
+print(prime_num(20031))
+end_time = time.time()
+
+print(f'execution time: {end_time - start_time}')                    # here showing total execution time
+
+
+''' 
+    line 1 is used to import time module  , 12, 14 and 16 are only used to get execution time of code and hence it is not necessary.
+'''
